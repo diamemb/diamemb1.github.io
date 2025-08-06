@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* ====== BASE ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 9rem;
+}
+
+/* ====== HEADER ====== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(183, 75, 75, 0.2);
+}
+/* Style pour le conteneur social + bouton CV */
+.social-download-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Espacement amélioré pour les icônes sociales */
+.social-icons {
+    display: flex;
+    gap: 2rem; /* Augmente l'espace entre les icônes */
+    margin-bottom: 1rem;
+}
+
+/* Style du bouton de téléchargement */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    background-color: #b74b4b;
+    color: white !important;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #9b3a3a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(183, 75, 75, 0.4);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+nav a {
+    font-size: 1.6rem;
+    color: white;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background-color: #b74b4b;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+/* ====== SECTIONS ====== */
+section {
+    min-height: 100vh;
+    padding: 6rem 9%;
+    scroll-margin-top: 10rem; 
+}
+
+section h2 {
+    font-size: 3.6rem;
+    color: #9b3a3a;
+    margin-bottom: 2rem;
+    scroll-margin-top: 10rem; 
+}
+
+section p, li {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    scroll-margin-top: 10rem; 
+}
+
+ul li {
+    margin-bottom: 1rem;
+    scroll-margin-top: 10rem; 
+}
+
+/* ====== À PROPOS ====== */
+#about p {
+    max-width: 900px;
+}
+
+/* ====== EXPÉRIENCES ET PROJETS ====== */
+.job, .project {
+    margin-bottom: 3rem;
+}
+
+.job h3, .project h3 {
+    color: #539ec4;
+    font-size: 2rem;
+}
+
+.job p em, .project p em {
+    color: #aaa;
+    font-size: 1.4rem;
+}
+
+/* ====== COMPÉTENCES ====== */
+#skills ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+#skills li::before {
+    content: "✔";
+    margin-right: 0.8rem;
+    color: #b74b4b;
+}
+
+/* ====== CONTACT ====== */
+#contact a {
+    color: #b74b4b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* ====== SOCIAL ICONS ====== */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid #b74b4b;
+    color: #b74b4b;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #b74b4b;
+    color: #000;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #b74b4b;
+}
+
+/* ====== BOUTON GÉNÉRAL ====== */
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    border: 2px solid #b74b4b;
+    border-radius: 4rem;
+    color: #b74b4b;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b74b4b;
+    color: #000;
+    box-shadow: 0 0 10px #b74b4b;
+}
+
+/* ====== TYPING TEXT ====== */
+.typing-text {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.typing-text span::before {
+    content: "Salut, C'est Papa Diamé ";
+    color: #539ec4;
+    animation: words 15s infinite;
+}
+
+@keyframes words {
+    0%   { content: "Étudiant en Génie Informatique"; }
+    25%  { content: "Passionné par le Développement"; }
+    50%  { content: "et les Systèmes Informatiques"; }
+    75%  { content: "À la recherche de défis"; }
+}
+    
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    background-color: #0a0a0a;
+    color: #888;
+    border-top: 1px solid #222;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+        .social-download-container {
+            gap: 1.5rem;
+        }
+        
+        .social-icons {
+            gap: 1.5rem;
+        }
+        
+        .download-btn {
+            padding: 1rem 2rem;
+            font-size: 1.4rem;
+        }
+
+    section {
+        padding: 4rem 5%;
+    }
+
+        nav ul {
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+        section {
+            text-align: left; /* Meilleure lisibilité */
+            padding: 4rem 2rem; /* Réduit les marges */
+        }
+    }
+
+section {
+    min-height: 100vh;
+    padding: 6rem 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+ul li::before {
+    content: "➤ "; /* Ou utilise un autre symbole : "▹", "•", "–", etc. */
+    color: #e94f5f; /* couleur personnalisée */
+    margin-right: 8px;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
